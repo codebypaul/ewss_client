@@ -1,13 +1,21 @@
-import React from 'react';
+import styled from 'styled-components'
 
-const Footer = () => {
+export default function Footer() {
     return (
-        <footer className="footer bg-dark mt-5">
-            <div className="container text-center">
-                <span className="text-muted">@2020 Product of team 5</span>
+        <FooterWrapper>
+            <div className="row m-0 text-center">
+                <div className="col-md-4">Help</div>
+                <div className="col-md-4">About</div>
+                <div className="col-md-4">Legal</div>
             </div>
-        </footer>
+            <div className="container text-center">
+                <span className="text-muted">@2021 Eastern Waters Swim School</span>
+            </div>
+        </FooterWrapper>
     )
 }
 
-export default Footer;
+const FooterWrapper = styled.div`
+    background: black;
+    color: white;
+`

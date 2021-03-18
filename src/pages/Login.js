@@ -4,6 +4,7 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 import { Redirect } from 'react-router-dom';
+import {Form} from 'react-bootstrap'
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
 // import keys from '../utils/credentials';
 // const { REACT_APP_SERVER_URL } = keys;
@@ -57,6 +58,15 @@ const Login = (props) => {
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
                             <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" />
+                        </div>
+                        <div className="row m-0 d-flex justify-content-between">
+                        <Form.Group>
+                            <Form.Check type="checkbox" label="Remember Me" />
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Check type="checkbox" label="Employee Login" />
+                        </Form.Group>
+
                         </div>
                         <button type="submit" className="btn btn-primary float-right">Submit</button>
                     </form>

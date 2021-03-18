@@ -5,7 +5,7 @@ import {ProgressBar} from 'react-bootstrap'
 
 export default function StudentCard(props) {
     const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
-    const now = 50
+    const now = props.now
     const progressInstance = <ProgressBar striped variant='success' now={now} label={`${now}%`} />
     return (
         <CardWrapper>
@@ -28,7 +28,8 @@ export default function StudentCard(props) {
 }
 
 const CardWrapper = styled.div`
-    width: 66%;
+    width: 100%;
+    padding: 2rem 5rem;
     .student-card {
         padding: 3rem;
         border-radius: .5rem;
