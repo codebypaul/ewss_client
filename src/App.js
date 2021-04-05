@@ -15,6 +15,7 @@ import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import Instructors from './pages/Instructors';
 import Blog from './pages/Blog'
 import Pricing from './pages/Pricing'
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -66,6 +67,7 @@ function App() {
           <Route path='/about' component={ About } />
           <PrivateRoute path="/profile" component={ Profile } user={currentUser}/>
           <Route exact path="/" component={ Home }/>
+          <Route exact path="/instructors" component={ Instructors }/>
           <Route path='/blog' component={ Blog }/>
           <Route path='/pricing' component={ Pricing }/>
         </Switch>
