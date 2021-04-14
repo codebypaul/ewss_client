@@ -40,7 +40,7 @@ export default function Profile(props) {
     }
     const userData = props.user ? 
     (<ProfilePage>
-        <div className="container-fluid student-info-cards">
+        <div className="row m-0 student-info-cards">
             <Carousel interval={null}>
                 <Carousel.Item>
                     <StudentCard now={25}/>
@@ -91,7 +91,7 @@ const ProfilePage = styled.div`
         padding: 4rem 0 8rem 0;
         background: black;
         overflow-x: scroll;
-        width: 100vw;
+        width: 100%;
     }
     .test-card {
         background: white;
